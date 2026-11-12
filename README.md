@@ -19,12 +19,12 @@ Este repositório faz parte de um conjunto de seis:
 
 | O quê | Link |
 |---|---|
-| Swagger do BFF | {{URL_BFF}}/docs |
-| OpenAPI (JSON) | {{URL_BFF}}/openapi.json |
-| Health | {{URL_BFF}}/health |
-| API Gateway (entrada oficial) | {{URL_GATEWAY}} |
+| Swagger do BFF | https://bff.agreeablesand-8dc3837e.brazilsouth.azurecontainerapps.io/docs |
+| OpenAPI (JSON) | https://bff.agreeablesand-8dc3837e.brazilsouth.azurecontainerapps.io/openapi.json |
+| Health | https://bff.agreeablesand-8dc3837e.brazilsouth.azurecontainerapps.io/health |
+| API Gateway (entrada oficial) | https://apim-pjbl-0a42b2.azure-api.net/conecta |
 | Frontend | https://devinigarcia.github.io/pjbl-microfrontend |
-| Imagem Docker | https://hub.docker.com/r/{{DOCKERHUB_USER}}/pjbl-bff |
+| Imagem Docker | https://hub.docker.com/r/vinigarciaa/pjbl-bff |
 
 > Em produção o BFF só responde para o API Gateway (ver [Segurança](#segurança)). Health e Swagger ficam abertos.
 
@@ -259,16 +259,16 @@ O teste "Domain não depende de nenhuma outra camada nem de pacotes externos" ac
 A imagem é multi-stage (`node:22-alpine`), roda com usuário sem privilégio e tem `HEALTHCHECK`.
 
 ```bash
-docker build -t {{DOCKERHUB_USER}}/pjbl-bff:v1 .
+docker build -t vinigarciaa/pjbl-bff:v1 .
 docker login
-docker push {{DOCKERHUB_USER}}/pjbl-bff:v1
+docker push vinigarciaa/pjbl-bff:v1
 
 # para testar a imagem
-docker run --rm -p 3000:3000 --env-file .env {{DOCKERHUB_USER}}/pjbl-bff:v1
+docker run --rm -p 3000:3000 --env-file .env vinigarciaa/pjbl-bff:v1
 ```
 
 > O enunciado dá como exemplo `dockerhubuser/pjbl/bff:v1`, mas o Docker Hub não aceita repositório aninhado
-> (`usuario/pasta/imagem`). Por isso usamos o nome do projeto como prefixo: `{{DOCKERHUB_USER}}/pjbl-bff:v1`.
+> (`usuario/pasta/imagem`). Por isso usamos o nome do projeto como prefixo: `vinigarciaa/pjbl-bff:v1`.
 
 No dia a dia ninguém precisa rodar esses comandos: o workflow `.github/workflows/ci.yml` roda os testes e, a cada push
 na `main`, publica a imagem com as tags `v1`, `latest` e `sha-<commit>`. Ele usa os secrets `DOCKERHUB_USERNAME` e
