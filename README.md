@@ -8,12 +8,12 @@ Este repositório faz parte de um conjunto de seis:
 
 | Repositório | O que é |
 |---|---|
-| [pjbl-microfrontend](https://github.com/{{GITHUB_USER}}/pjbl-microfrontend) | Interface (React + Module Federation) |
+| [pjbl-microfrontend](https://github.com/devinigarcia/pjbl-microfrontend) | Interface (React + Module Federation) |
 | **pjbl-bff** (este) | Backend for Frontend (Node + Express) |
-| [pjbl-ms-produtos](https://github.com/{{GITHUB_USER}}/pjbl-ms-produtos) | Microserviço de produtos e estoque (MongoDB Atlas) |
-| [pjbl-ms-pedidos](https://github.com/{{GITHUB_USER}}/pjbl-ms-pedidos) | Microserviço de pedidos (Azure SQL) + eventos |
-| [pjbl-function](https://github.com/{{GITHUB_USER}}/pjbl-function) | Azure Function (HTTP Trigger + Queue Trigger) |
-| [pjbl-arquitetura](https://github.com/{{GITHUB_USER}}/pjbl-arquitetura) | ARC42, C4, Canvas, API Gateway e scripts de deploy |
+| [pjbl-ms-produtos](https://github.com/devinigarcia/pjbl-ms-produtos) | Microserviço de produtos e estoque (MongoDB Atlas) |
+| [pjbl-ms-pedidos](https://github.com/devinigarcia/pjbl-ms-pedidos) | Microserviço de pedidos (Azure SQL) + eventos |
+| [pjbl-function](https://github.com/devinigarcia/pjbl-function) | Azure Function (HTTP Trigger + Queue Trigger) |
+| [pjbl-arquitetura](https://github.com/devinigarcia/pjbl-arquitetura) | ARC42, C4, Canvas, API Gateway e scripts de deploy |
 
 ## Na nuvem
 
@@ -23,7 +23,7 @@ Este repositório faz parte de um conjunto de seis:
 | OpenAPI (JSON) | {{URL_BFF}}/openapi.json |
 | Health | {{URL_BFF}}/health |
 | API Gateway (entrada oficial) | {{URL_GATEWAY}} |
-| Frontend | {{URL_FRONTEND}} |
+| Frontend | https://devinigarcia.github.io/pjbl-microfrontend |
 | Imagem Docker | https://hub.docker.com/r/{{DOCKERHUB_USER}}/pjbl-bff |
 
 > Em produção o BFF só responde para o API Gateway (ver [Segurança](#segurança)). Health e Swagger ficam abertos.
@@ -200,7 +200,7 @@ front até o banco.
 Precisa de Node 22 ou mais novo.
 
 ```bash
-git clone https://github.com/{{GITHUB_USER}}/pjbl-bff.git
+git clone https://github.com/devinigarcia/pjbl-bff.git
 cd pjbl-bff
 npm install
 cp .env.example .env      # no Windows: copy .env.example .env
