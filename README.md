@@ -276,4 +276,7 @@ na `main`, publica a imagem com as tags `v1`, `latest` e `sha-<commit>`. Ele usa
 
 ## Alunos
 
-{{ALUNOS}}
+- Arthur Ambrozewicz Cidral
+- Erick Marlon Barbieri da Silva
+- Luan Alberti Estevinho
+- Vinícius de Oliveira Garcia
