@@ -1,0 +1,40 @@
+{
+  "name": "pjbl-bff",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BFF (Backend for Frontend) do Conecta Store: agrega ms-produtos, ms-pedidos e a Azure Function para o microfrontend.",
+  "main": "dist/main.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:arch": "vitest run tests/architecture"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "pino": "^9.7.0",
+    "pino-http": "^10.5.0",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.0",
+    "@types/supertest": "^6.0.3",
+    "@types/swagger-ui-express": "^4.1.8",
+    "supertest": "^7.1.4",
+    "tsx": "^4.20.3",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
